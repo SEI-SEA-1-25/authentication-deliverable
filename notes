@@ -27,3 +27,5 @@ npm i morgan
 npm i cookie-parser
 
 npm i crypto-js
+
+npm i bcrypt
