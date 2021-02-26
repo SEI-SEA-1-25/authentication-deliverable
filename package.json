@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "crypto-js": "^4.0.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
@@ -8,5 +10,23 @@
     "pg": "^8.5.1",
     "rowdy-logger": "^1.0.2",
     "sequelize": "^6.5.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "authentication-deliverable",
+  "description": "Your mission is to build the exact same app we did today in class. In case of emergency, a sample solution can be found here: https://github.com/SEI-SEA-1-25/intro-to-authentication-soln. Your app should have the following user stories:",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisaJohnston/authentication-deliverable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouisaJohnston/authentication-deliverable/issues"
+  },
+  "homepage": "https://github.com/LouisaJohnston/authentication-deliverable#readme"
 }
