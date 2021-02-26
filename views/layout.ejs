@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Deliverabl</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+    <% if(user){ %>
+
+        <a href="/user/profile" id="profile">profile</a>
+        <a href="/user/logout" id="logout">Logout</a>
+    
+        <% } else { %>
+
+            <a href="/user/login" id="login">Login</a>
+            <a href="/user/new" id="signup">Sign Up</a>
+
+    <%  }   %> 
+    </nav>
+
+    <%- body %> 
+</body>
+</html>
