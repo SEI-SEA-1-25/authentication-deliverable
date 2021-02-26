@@ -1,0 +1,10 @@
+<header>
+    <a href="/">Home</a>
+    <% if (user) {%>
+        <a href="/users/logout">log the f out</a>
+        <a href="/users/profile">view profile</a>
+    <% } else {%>
+        <a href="/users/new">Add a New User</a>
+        <a href="/users/login">LOG IN!!!!!!</a>
+    <% } %>
+</header>
