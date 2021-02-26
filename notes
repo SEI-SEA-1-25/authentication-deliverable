@@ -1,0 +1,23 @@
+npm i
+
+npm i express
+
+echo node_modules >> .gitignore
+
+npm i sequelize pg rowdy-logger
+
+sequelize init
+
+npm i dotenv
+
+sequelize db:create
+
+sequelize model:generate --name=user --attributes email:string,password:string
+
+sequelize db:migrate
+
+npm i ejs
+
+npm i express-ejs-layouts
+
+npm i morgan
