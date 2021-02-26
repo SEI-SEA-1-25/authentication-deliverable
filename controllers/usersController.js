@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const db = require('../models')
+const cryptoJs = require('crypto-js')
 
 
 
@@ -32,6 +33,7 @@ router.post('/new', async (req, res) =>{
             password: req.body.password
         })
         console.log("this is the console " + newUser.name)
+        
         res.cookie('userId', newUser.id)
         res.redirect('/')
     }catch(err){
@@ -45,7 +47,9 @@ router.post('/login', async (req, res) => {
     where: {email: req.body.email}
    })
    if(member.password === req.body.password) {
-       res.cookie('userId', member.id)
+       const encryptedUserId = cryptoJs.AES.encrypt(member.id.toString(), process.env.COOKIE_SECRET)
+       const encryptedUserIdString = encryptedUserId.toString()
+       res.cookie('userId', encryptedUserIdString)
        res.redirect('/users/profile')
    }else {
        res.render('users/login')
