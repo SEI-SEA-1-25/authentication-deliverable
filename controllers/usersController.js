@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const db = require('../models')
 const cryptoJs = require('crypto-js')
+const bcrypt = require('bcryptjs')
 
 
 
@@ -27,15 +28,21 @@ router.get('/logout',(req, res) => {
 
 router.post('/new', async (req, res) =>{
     try{
+        const plainPassword = req.body.password
+        const hashedPassword = bcrypt.hashSync(plainPassword, 12)
+
+        console.log(hashedPassword)
+
         const newUser = await db.user.create({
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password
+            password: hashedPassword
         })
-        console.log("this is the console " + newUser.name)
-        
-        res.cookie('userId', newUser.id)
+        const encryptedUserId = cryptoJs.AES.encrypt(newUser.id.toString(), process.env.COOKIE_SECRET)
+        const encryptedUserIdString = encryptedUserId.toString()
+        res.cookie('userId', encryptedUserIdString)
         res.redirect('/')
+
     }catch(err){
      console.log(err)
     }
@@ -47,6 +54,7 @@ router.post('/login', async (req, res) => {
     where: {email: req.body.email}
    })
    if(member.password === req.body.password) {
+    //   if(bcrypt.compare)
        const encryptedUserId = cryptoJs.AES.encrypt(member.id.toString(), process.env.COOKIE_SECRET)
        const encryptedUserIdString = encryptedUserId.toString()
        res.cookie('userId', encryptedUserIdString)
