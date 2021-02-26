@@ -1,0 +1,149 @@
+Set up sequencing
+
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i  
+
+up to date, audited 1 package in 189ms
+
+found 0 vulnerabilities
+------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » sequelize init
+Unable to resolve sequelize package in /Users/thedavezone/Desktop/Coding-School/wk5/homework/authentication-deliverable
+------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm sequelize pg
+Top hits for "sequelize" "pg"
+————————————————————————————————————————————————————————————————————————————————
+npm help config                                                             pg:4
+npm help version                                                            pg:3
+npm help update                                                             pg:2
+npm help unpublish                                                          pg:1
+npm help package-json                                                       pg:1
+————————————————————————————————————————————————————————————————————————————————
+(run with -l or --long to see more context)
+
+------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i sequelize pg
+
+added 39 packages, and audited 40 packages in 3s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i express
+
+added 57 packages, and audited 97 packages in 2s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » sequelize init               thedavezone@Davids-MacBook-Pro
+
+Sequelize CLI [Node: 15.9.0, CLI: 6.2.0, ORM: 6.5.0]
+
+Created "config/config.json"
+Successfully created models folder at "/Users/thedavezone/Desktop/Coding-School/wk5/homework/authentication-deliverable/models".
+Successfully created migrations folder at "/Users/thedavezone/Desktop/Coding-School/wk5/homework/authentication-deliverable/migrations".
+Successfully created seeders folder at "/Users/thedavezone/Desktop/Coding-School/wk5/homework/authentication-deliverable/seeders".
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » touch .gitignore             thedavezone@Davids-MacBook-Pro
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i dotenv                 thedavezone@Davids-MacBook-Pro
+
+added 1 package, and audited 98 packages in 638ms
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » touch .env                   thedavezone@Davids-MacBook-Pro
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i cookie-parser          thedavezone@Davids-MacBook-Pro
+
+added 1 package, and audited 99 packages in 782ms
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i ejs                    thedavezone@Davids-MacBook-Pro
+
+added 15 packages, and audited 114 packages in 1s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i morgan                 thedavezone@Davids-MacBook-Pro
+
+added 7 packages, and audited 121 packages in 957ms
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i rowdy-logger           thedavezone@Davids-MacBook-Pro
+
+added 5 packages, and audited 126 packages in 999ms
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i bcrypt                 thedavezone@Davids-MacBook-Pro
+
+added 46 packages, and audited 172 packages in 4s
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i crypto-js              thedavezone@Davids-MacBook-Pro
+
+added 1 package, and audited 173 packages in 631ms
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » npm i express-ejs-layouts    thedavezone@Davids-MacBook-Pro
+
+added 1 package, and audited 174 packages in 714ms
+
+3 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » sequelize db:create          thedavezone@Davids-MacBook-Pro
+
+Sequelize CLI [Node: 15.9.0, CLI: 6.2.0, ORM: 6.5.0]
+
+Loaded configuration file "config/config.json".
+Using environment "development".
+Database authentication_deliverable created.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » sequelize model:generate --name=user --attributes email:string,password:string         thedavezone@Davids-MacBook-Pro
+
+Sequelize CLI [Node: 15.9.0, CLI: 6.2.0, ORM: 6.5.0]
+
+New model was created at /Users/thedavezone/Desktop/Coding-School/wk5/homework/authentication-deliverable/models/user.js .
+New migration was created at /Users/thedavezone/Desktop/Coding-School/wk5/homework/authentication-deliverable/migrations/20210226050612-create-user.js .
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+~/Desktop/Coding-School/wk5/homework/authentication-deliverable(main*) » sequelize db:migrate                                  thedavezone@Davids-MacBook-Pro
+
+Sequelize CLI [Node: 15.9.0, CLI: 6.2.0, ORM: 6.5.0]
+
+Loaded configuration file "config/config.json".
+Using environment "development".
+== 20210226050612-create-user: migrating =======
+== 20210226050612-create-user: migrated (0.024s)
