@@ -21,7 +21,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: false }))
 app.use(ejsLayouts)
 app.use(methodOverride('_method'))
-app.use(require('morgan')('tiny'))
+app.use(require('morgan')('dev'))
 app.use(cookieParser())
 
 app.use(async (req, res, next) => {
