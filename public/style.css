@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(214, 107, 170, 0.918);
+    padding: 10px;
+}
+
+header a {
+    color:white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+header a:hover {
+    color: black;
+}
+
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
