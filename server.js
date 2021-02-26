@@ -24,10 +24,11 @@ app.use('/users', require('./controller/userController'))
 
 
 app.use(async (req, res, next) => {
-    
+
     const user = await models.user.findByPk(req.cookies.userId)
 
     res.locals.user = user
+    console.log(user)
 
     next()
 

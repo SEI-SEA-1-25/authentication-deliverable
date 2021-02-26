@@ -12,11 +12,12 @@ router.get('/new', (req, res) => {
 
 router.post('/', async (req, res) => {
     const user = await db.user.create({
-        email:req.body.email,
+        email: req.body.email,
         password: req.body.password
     })
     res.cookie('userId', user.id)
-    res.redirect('/')
+    res.redirect('/users/profile')
+
 })
 
 
@@ -30,7 +31,7 @@ router.post('/login', async (req, res) => {
     })
     if(user.password === req.body.password){
         res.cookie('userId', user.id)
-        res.redirect('/')
+        res.redirect('/users/profile')
     } else {
         res.render('users/login')
     }
@@ -40,6 +41,12 @@ router.post('/login', async (req, res) => {
 router.get('/logout', async (req, res) => {
     res.clearCookie('userId')
     res.redirect('/')
+})
+
+router.get('/profile', async (req, res) => {
+    console.log(res.locals.user)
+   
+    res.render('users/profile')
 })
 
 
