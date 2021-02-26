@@ -2,7 +2,7 @@
   "name": "authentication-deliverable",
   "version": "1.0.0",
   "description": "Your mission is to build the exact same app we did today in class. In case of emergency, a sample solution can be found here: https://github.com/SEI-SEA-1-25/intro-to-authentication-soln. Your app should have the following user stories:",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
