@@ -1,0 +1,13 @@
+<h4>💮 Log in 💮</h4>
+
+<% if (errors) { %> <%= errors %> <% } %>
+
+<form action="/users/login" method="POST">
+  <label for="email-input">email</label>
+  <input type="text" name="email" />
+
+  <label for="password-input">password</label>
+  <input type="password" name="password" />
+
+  <input type="submit" value="Log in!" />
+</form>
