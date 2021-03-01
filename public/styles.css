@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+
+.navlink-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: aquamarine;
+    width: 25%;
+    padding: 10px;
+}
+
+.nav-div{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.link{
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

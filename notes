@@ -1,0 +1,102 @@
+INITIAL FILE SET UP SEQUENCING 
+
+ » npm i  
+
+ » npm i sequelize pg
+
+ » npm i express
+
+ » sequelize init               
+
+ » touch .gitignore             
+
+ » npm i dotenv              
+
+ » touch .env                
+
+ » npm i cookie-parser       
+
+ » npm i ejs                 
+
+ » npm i morgan              
+
+ » npm i rowdy-logger        
+
+ » npm i bcrypt              
+
+ » npm i crypto-js           
+
+ » npm i express-ejs-layouts 
+
+ » sequelize db:create       
+
+ » sequelize model:generate --name=_____ --attributes _____:______,_______:________     
+
+ » sequelize  db:migrate          
+
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+
+Routes to create
+
+GET '/' -  homepage  (in server.js)
+
+1. Have display message/info 
+2. Navbar of "login" and "create account"
+
+// everything below here is a /users controller 
+
+
+GET '/users' - 
+renders 'users/profile'
+ - based of POST of login.  
+   result --> ejs conditional --> if(user login successful) { <%=user.email%> 'Welcome to ______...'}
+ - navbar has "logout" link --> ('/users/logout')
+
+GET '/users/new'
+renders 'users/new'
+
+
+GET '/users/login'
+renders 'users/login'
+
+GET '/users/logout' 
+-clears cookies
+-redirects to homepage
+
+
+POST /users/new-user
+1. Create Account Form 
+  - input email
+  - input password
+  - only Homepage link in navbar?
+
+ user inputs info into form, info gets INSERT INTO Database
+ with cookie info.
+
+ redirects user to homepage
+
+
+ POST /users/login
+ 1. login to account form
+  -input email
+  -input password
+  
+User correctly inputs their email and password, cookie information is passed.
+ redirects ('/users')
+
+User incorrectly inputs their email and password, re-renders page
+
+
+
+
+
+
+
+
+
+
+
+
+  
