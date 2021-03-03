@@ -7,7 +7,7 @@ const methodOverride = require('method-override')
 const cookieParser = require('cookie-parser')
 
 const cryptojs = require('crypto-js')
-// const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt')
 
 
 // const SECRET_STRING = process.env.SECRET_STRING
