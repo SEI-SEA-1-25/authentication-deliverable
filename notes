@@ -1,0 +1,21 @@
+Set Up Steps
+
+touch server.js
+
+npm init -y
+
+npm i express ejs express-ejs-layouts rowdy-logger morgan 
+
+
+if using own database
+
+npm i sequelize
+sequelize init
+npm i pg
+
+sequelize db:create
+
+seqelize model:generate --name=? --attributes name:text, 
+
+
+npm i cookie-parser
